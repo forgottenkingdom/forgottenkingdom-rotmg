@@ -43,7 +43,7 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
          {
             if(itemXML.@id == "Coral Venom Trap")
             {
-               tag = itemXML.Activate.(text() == "Trap")[0];
+               tag = itemXML.Activate.(text == "Trap")[0];
                text = tag.@totalDamage + " HP within " + tag.@radius + " sqrs\n" + "Paralyzed for " + tag.@condDuration + " seconds\n";
                comparisonText = comparisonText + ("Trap: " + wrapInColoredFont(text,UNTIERED_COLOR));
                processedTags[tag.toXMLString()] = true;

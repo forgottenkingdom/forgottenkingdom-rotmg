@@ -22,8 +22,8 @@ package com.company.assembleegameclient.ui.tooltip.slotcomparisons
          var avg:Number = NaN;
          var otherAvg:Number = NaN;
          var text:String = null;
-         activate = itemXML.Activate.(text() == "PoisonGrenade");
-         otherActivate = curItemXML.Activate.(text() == "PoisonGrenade");
+         activate = itemXML.Activate.(text == "PoisonGrenade");
+         otherActivate = curItemXML.Activate.(text == "PoisonGrenade");
          comparisonText = "";
          if(activate.length() == 1 && otherActivate.length() == 1)
          {
