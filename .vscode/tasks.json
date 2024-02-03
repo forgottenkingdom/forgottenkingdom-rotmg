@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Linux",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "/home/oneforx/air/bin/adt -package -storetype pkcs12 -keystore \"${workspaceFolder}/realm-air/cert.p12\" -target bundle \"${workspaceFolder}/realm-air/build\" \"${workspaceFolder}/realm-air/src/App.xml\" -C \"${workspaceFolder}/realm-air/src\" Main.swf"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
