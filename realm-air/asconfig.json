@@ -1,0 +1,20 @@
+{
+    "config": "airmobile",
+    "compilerOptions": {
+      "output": "output.swf"
+    },
+    "application": "src/App.xml",
+    "files": [
+      "src/Main.as"
+    ],
+    "airOptions": {
+      "output": "MyApplicationName",
+      "signingOptions": {
+        "storetype": "pkcs12",
+        "keystore": "./cert.p12",
+        "providerName": "Adobe AIR"
+      }
+    },
+    "sdk": "/home/oneforx/air/"
+  }
+  
