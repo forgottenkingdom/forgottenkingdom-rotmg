@@ -5,7 +5,7 @@ package kabam.rotmg.application.impl
    
    public class ReleaseSetup implements ApplicationSetup
    {
-      private const SERVER:String = "127.0.0.1";
+      private const SERVER:String = "172.20.10.2:8080";
 
       private const UNENCRYPTED:String = "http://" + SERVER;
 

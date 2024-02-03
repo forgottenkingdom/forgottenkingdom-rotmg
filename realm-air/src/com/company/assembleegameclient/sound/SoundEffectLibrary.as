@@ -16,7 +16,7 @@ package com.company.assembleegameclient.sound
       
       private static var urlBase:String;
       
-      private static const URL_PATTERN:String = "{URLBASE}/sfx/{NAME}.mp3";
+      private static const URL_PATTERN:String = "{URLBASE}/public/static/sfx/{NAME}.mp3";
       
       public static var nameMap_:Dictionary = new Dictionary();
       

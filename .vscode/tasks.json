@@ -7,7 +7,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "/home/oneforx/air/bin/adt -package -storetype pkcs12 -keystore \"${workspaceFolder}/realm-air/cert.p12\" -target bundle \"${workspaceFolder}/realm-air/build\" \"${workspaceFolder}/realm-air/src/App.xml\" -C \"${workspaceFolder}/realm-air/src\" Main.swf"
+                "/home/oneforx/air/bin/adt -package -storetype pkcs12 -keystore \"${workspaceFolder}/realm-air/cert.p12\" -target bundle \"${workspaceFolder}/realm-air/build\" \"${workspaceFolder}/realm-air/src/App.xml\" -C \"${workspaceFolder}/realm-air/src\" WebMain.swf"
             ],
             "group": {
                 "kind": "build",
@@ -21,7 +21,7 @@
             "command": "cmd",
             "args": [
                 "/c",
-                "C:\\Users\\Dell\\air\\bin\\adt.bat -package -storetype pkcs12 -keystore \"${workspaceFolder}/realm-air/cert.p12\" -target bundle \"${workspaceFolder}/realm-air/build/win\" \"${workspaceFolder}/realm-air/src/App.xml\" -C \"${workspaceFolder}/realm-air/src\" Main.swf"
+                "C:\\Users\\Dell\\air\\bin\\adt.bat -package -storetype pkcs12 -keystore \"${workspaceFolder}/realm-air/cert.p12\" -target bundle \"${workspaceFolder}/realm-air/build/win\" \"${workspaceFolder}/realm-air/src/App.xml\" -C \"${workspaceFolder}/realm-air/src\" WebMain.swf"
             ],
             "group": {
                 "kind": "build",

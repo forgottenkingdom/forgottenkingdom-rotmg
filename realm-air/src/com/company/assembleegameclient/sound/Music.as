@@ -24,7 +24,7 @@ package com.company.assembleegameclient.sound
       public static function load() : void
       {
          var setup:ApplicationSetup = StaticInjectorContext.getInjector().getInstance(ApplicationSetup);
-         var url:String = setup.getAppEngineUrl(true) + "/music/sorc.mp3";
+         var url:String = setup.getAppEngineUrl(true) + "public/static/music/sorc.mp3";
          music_ = new Sound();
          music_.load(new URLRequest(url));
          musicChannel_ = music_.play(0,int.MAX_VALUE,new SoundTransform(Boolean(Parameters.data_.playMusic)?Number(0.3):Number(0)));

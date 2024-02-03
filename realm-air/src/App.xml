@@ -6,7 +6,7 @@
     <description>Mon application Adobe AIR</description>
     <name>ForgottenKingdom</name>
     <initialWindow>
-        <content>Main.swf</content>
+        <content>WebMain.swf</content>
         <visible>true</visible>
         <fullScreen>false</fullScreen>
         <aspectRatio>portrait</aspectRatio>
