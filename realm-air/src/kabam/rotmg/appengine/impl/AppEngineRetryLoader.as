@@ -142,26 +142,20 @@ package kabam.rotmg.appengine.impl
       
       private function handleTextResponse(response:String) : void
       {
-         if(response.substring(0,7) == "<Error>")
+         var res: Object = JSON.parse(response);
+
+         if(res.success == false)
          {
-            this.retryOrReportError(response);
-         }
-         else if(response.substring(0,12) == "<FatalError>")
-         {
-            this.cleanUpAndComplete(false,response);
+            this.retryOrReportError(res.messageCode);
          }
          else
          {
-            this.cleanUpAndComplete(true,response);
+            this.cleanUpAndComplete(true,res);
          }
       }
       
-      private function cleanUpAndComplete(isOK:Boolean, data:*) : void
+      private function cleanUpAndComplete(isOK:Boolean, data:Object) : void
       {
-         if(!isOK && data is String)
-         {
-            data = this.parseXML(data);
-         }
          this.cancelPendingRequest();
          this._complete.dispatch(isOK,data);
       }

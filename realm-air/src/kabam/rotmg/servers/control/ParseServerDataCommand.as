@@ -12,7 +12,7 @@ package kabam.rotmg.servers.control
       public var servers:ServerModel;
       
       [Inject]
-      public var data:XML;
+      public var data:Object;
       
       public function ParseServerDataCommand()
       {
@@ -26,19 +26,18 @@ package kabam.rotmg.servers.control
       
       private function makeListOfServers() : Vector.<Server>
       {
-         var xml:XML = null;
-         var serverList:XMLList = this.data.child("Servers").child("Server");
+         var serverList:Array = this.data.data;
          var list:Vector.<Server> = new Vector.<Server>(0);
-         for each(xml in serverList)
+         for each(var server: Object in serverList)
          {
-            list.push(this.makeServer(xml));
+            list.push(this.makeServer(server));
          }
          return list;
       }
       
-      private function makeServer(xml:XML) : Server
+      private function makeServer(obj:Object) : Server
       {
-         return new Server().setName(xml.Name).setAddress(xml.DNS).setPort(Parameters.PORT).setLatLong(Number(xml.Lat),Number(xml.Long)).setUsage(xml.Usage).setIsAdminOnly(xml.hasOwnProperty("AdminOnly"));
+         return new Server().setName(obj.name).setAddress(obj.dns).setPort(obj.port).setLatLong(Number(obj.lat),Number(obj.long)).setUsage(obj.usage).setIsAdminOnly(obj.adminOnly);
       }
    }
 }

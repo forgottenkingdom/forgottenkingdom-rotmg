@@ -55,7 +55,7 @@ package kabam.rotmg.account.core.services
       private function sendRequest() : void
       {
          this.client.complete.addOnce(this.onComplete);
-         this.client.sendRequest("/char/list",this.requestData);
+         this.client.sendRequest("/server/list",this.requestData);
       }
       
       private function onComplete(isOK:Boolean, data:*) : void
@@ -66,7 +66,7 @@ package kabam.rotmg.account.core.services
          }
          else
          {
-            this.onTextError(data);
+            this.onTextError(data.messageCode);
          }
       }
       
@@ -76,9 +76,9 @@ package kabam.rotmg.account.core.services
          return params;
       }
       
-      private function onListComplete(data:String) : void
+      private function onListComplete(data:Object) : void
       {
-         this.charListData.dispatch(XML(data));
+         this.charListData.dispatch(data);
          completeTask(true);
          if(this.retryTimer != null)
          {
@@ -103,7 +103,7 @@ package kabam.rotmg.account.core.services
       {
          this.logger.info("GetUserDataTask invalid credentials");
          this.account.clear();
-         this.client.sendRequest("/char/list",this.requestData);
+         this.client.sendRequest("/servers/list",this.requestData);
       }
       
       private function waitForASecondThenRetryRequest() : void
