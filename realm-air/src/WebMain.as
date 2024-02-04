@@ -2,12 +2,12 @@ package
 {
    import com.company.assembleegameclient.parameters.Parameters;
    import com.company.assembleegameclient.util.AssetLoader;
-import com.company.assembleegameclient.util.StageProxy;
+   import com.company.assembleegameclient.util.StageProxy;
 
-import flash.display.LoaderInfo;
+   import flash.display.LoaderInfo;
    import flash.display.Sprite;
-import flash.display.Stage;
-import flash.display.StageScaleMode;
+   import flash.display.Stage;
+   import flash.display.StageScaleMode;
    import flash.events.Event;
    import flash.system.Capabilities;
    import kabam.lib.net.NetConfig;
@@ -30,8 +30,8 @@ import flash.display.StageScaleMode;
    import kabam.rotmg.minimap.MiniMapConfig;
    import kabam.rotmg.news.NewsConfig;
    import kabam.rotmg.servers.ServersConfig;
-import kabam.rotmg.stage3D.Stage3DConfig;
-import kabam.rotmg.startup.StartupConfig;
+   import kabam.rotmg.stage3D.Stage3DConfig;
+   import kabam.rotmg.startup.StartupConfig;
    import kabam.rotmg.startup.control.StartupSignal;
    import kabam.rotmg.tooltips.TooltipsConfig;
    import kabam.rotmg.ui.UIConfig;
